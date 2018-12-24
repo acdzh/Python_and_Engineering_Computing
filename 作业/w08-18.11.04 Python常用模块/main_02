@@ -1,0 +1,16 @@
+
+OUT = 
+	 $\int_{0}^{\infty}{x^{10} e^{-x} dx} = 3628800$
+	2*exp(x)*cos(x)
+	$\dfrac{d^2}{dx^2}{e^{x\sin x}} = 2 e^{x} \cos{\left (x \right )}$
+
+IN = 
+	import sympy
+	sympy.init_printing(use_unicode=True)
+	x = sympy.symbols(' x ')
+
+	exc = sympy.integrate(x ** 10 * sympy.exp(-1 * x), (x,0,+sympy.oo))
+	print(exc)
+	exc = sympy.diff(sympy.diff(sympy.exp(x) * sympy.sin(x), x), x)
+	print(exc)
+	print(sympy.latex(exc))

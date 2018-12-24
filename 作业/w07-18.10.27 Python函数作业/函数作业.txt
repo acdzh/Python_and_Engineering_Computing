@@ -1,0 +1,49 @@
+第1题：
+按照函数要求，和调试语句，完成函数功能。
+def istriangle(*param):
+    """函数说明"""
+    #请再次完成函数功能
+
+istriangle(3,2,3)  #输出“可以构成三角形”
+istriangle(3,1,1)  #输出“不可以构成三角形”
+istriangle(3,2,'a',-1) #输出"有参数小于0！"
+istriangle(3,2,'a',3)  #取参数中前面3个有效数来判断是否能够成三角形，输出“可以构成三角形”
+istriangle(3,2)  #输出“参数不够”
+
+第2题：
+### 改进下列程序，使得列表中任意位置出现非数字元素，均能实现获取列表的最大值
+list1 = ['b', 'c', 23, -59, 32, 'a', 76, 20]
+
+max = list1[0]
+for each in list1:
+    #print(each)
+    if type(each) in [int, float]:
+        if each > max:
+            max =  each
+
+print(max)
+
+第3题：
+def generate2circles(lim_A_x = 0, lim_A_y = 0, lim_B_x = 10, lim_B_x = 10)->dict:
+    """  本函数在两个点A、B所围成的矩形中，生成2个大小位置都随机的圆形
+         要求返回一个具有一个元素元组。
+         同时特别注意：两个圆不能超出这个矩形，同时两个圆不能有交集
+         输入参数：
+         lim_A_x : A点的x坐标
+         lim_A_y : A点的y坐标
+         lim_B_x : B点的x坐标
+         lim_B_y : B点的y坐标
+         输出参数：
+         c1x : 1#圆心x坐标
+         c1y : 1#圆心y坐标
+         c1r : 1#圆半径r
+         c2x : 2#圆心x坐标
+         c2y : 2#圆心y坐标
+         c2r : 2#圆半径r
+         
+         """
+    
+    
+    return (c1x,c1y,c1r,c2x,c2y,c2r)
+
+generate2circles()
